@@ -1,4 +1,4 @@
-package com.zzh
+package com.zzh.basic
 
 /**
  * Data class gets next functions, generated automatically:

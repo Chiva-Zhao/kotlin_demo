@@ -1,13 +1,13 @@
-package com.zzh
+package com.zzh.basic
 
 /**
  * Created by test on 2017/5/18.
  */
 fun main(args: Array<String>) {
-    cases(1)
-    cases("Hello")
-    cases(MyClass())
-    cases("hello")
+    com.zzh.basic.cases(1)
+    com.zzh.basic.cases("Hello")
+    com.zzh.basic.cases(MyClass())
+    com.zzh.basic.cases("hello")
     val customer = Customer("Phase")
     println(customer.name)
 }

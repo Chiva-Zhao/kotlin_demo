@@ -1,4 +1,4 @@
-package com.zzh
+package com.zzh.basic
 
 /**
  * Created by test on 2017/5/19.
