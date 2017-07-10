@@ -2,3 +2,6 @@
 .idea/
 out/
 /.idea/libraries/
+/kotlin_demo.iml
+/.idea/misc.xml
+/.idea/modules.xml
