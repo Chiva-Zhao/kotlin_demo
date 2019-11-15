@@ -68,3 +68,14 @@ Use `in` and `out` types with generics to provide better type checking to restri
 - Reified types are sometimes necessary because of type erasure. Reified types, unlike generic types, persist to runtime.
 - Use the `check()` function to verify your code is running as expected. For example:
 ```check(!waterSupply.needsProcessing) { "water supply needs processing first" }```
+### annotations, labeled breaks, higher-order functions, SAM
+- Use annotations to specify things to the compiler. For example:
+```@file:JvmName("Foo")```
+- Use labeled breaks to let your code exit from inside nested loops. For example:
+```if (i > 10) break@outerLoop // breaks to outerLoop label```
+- Lambdas can be very powerful when coupled with higher-order functions.
+- Lambdas are objects. To avoid creating the object, you can mark the function with `inline`, and the compiler will put the contents of the lambda in the code directly.
+- Use `inline` carefully, but it can help reduce resource usage by your program.
+- SAM, Single Abstract Method, is a common pattern, and made simpler with lambdas. The basic pattern is:
+```Class.singleAbstractMethod { lamba_of_override }```
+- The Kotlin Standard Library provides numerous useful functions, including several SAMs, so get to know what's in it.
