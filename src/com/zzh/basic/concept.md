@@ -46,3 +46,25 @@ A class can define one or more secondary constructors using `constructor`, but K
 - When you use interfaces to compose a class, the class's functionality is extended by way of the class instances that it contains.
 - Interface delegation uses composition, but also delegates the implementation to the interface classes.
 - Composition is a powerful way to add functionality to a class using interface delegation. In general composition is preferred, but inheritance from an abstract class is a better fit for some problems.
+### collections,constants,extension functions and properties
+- Pairs and triples can be used to return more than one value from a function. For example:
+```val twoLists = fish.partition { isFreshWater(it) }```
+- Kotlin has many useful functions for `List`, such as `reversed()`, `contains()`, and `subList()`.
+- A `HashMap` can be used to map keys to values. For example:
+```val cures = hashMapOf("white spots" to "Ich", "red sores" to "hole disease")```
+- Declare compile-time constants using the `const` keyword. You can put them at the top level, organize them in a singleton object, or put them in a companion object.
+- A companion object is a singleton object within a class definition, defined with the `companion` keyword.
+- Extension functions and properties can add functionality to a class. For example:
+```fun String.hasSpaces() = find { it == ' ' } != null```
+- A nullable receiver allows you to create extensions on a class which can be `null`. The `?.` operator can be paired with `apply` to check for `null` before executing code. For example:
+```this?.apply { println("removing $this") }```
+### generic classes, methods, and functions
+- Create generic classes to make code more flexible.
+- Add generic constraints to limit the types used with generics.
+Use `in` and `out` types with generics to provide better type checking to restrict types being passed into or returned from classes.
+- Create generic functions and methods to work with generic types. For example:
+```fun <T: WaterSupply> isWaterClean(aquarium: Aquarium<T>) { ... }```
+- Use generic extension functions to add non-core functionality to a class.
+- Reified types are sometimes necessary because of type erasure. Reified types, unlike generic types, persist to runtime.
+- Use the `check()` function to verify your code is running as expected. For example:
+```check(!waterSupply.needsProcessing) { "water supply needs processing first" }```
